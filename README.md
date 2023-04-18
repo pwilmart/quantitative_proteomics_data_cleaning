@@ -87,7 +87,7 @@ These different QC views are complementary, and some may reveal things that othe
 
 ### Summary
 
-QC notebooks are a semi-automated approach to exploratory data analysis. I use them more as QC templates – making copies and editing them for each project. The markdown cells capture observations about the data, and each project seems to have something unique and interesting about its data. When several projects, with a variety of sample types and experimental designs, have been processed with some consistent set of QC metrics, then a baseline knowledge of what constitutes good data can be established. QC always benefits from a lot of context.
+The data cleaning steps and QC notebooks are a semi-automated approach to exploratory data analysis. I use the QC notebooks more as templates – making copies and editing them for each project. The markdown cells capture observations about the data, and each project seems to have something unique and interesting about its data. When several projects, with a variety of sample types and experimental designs, have been processed with some consistent set of QC metrics, then a baseline knowledge of what constitutes good data can be established. QC always benefits from a lot of context.
 
 ---
 
