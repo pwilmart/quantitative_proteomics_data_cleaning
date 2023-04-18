@@ -38,7 +38,10 @@ I like Excel for table exploration and filtering (data cleaning/wrangling) to pr
 
 ### Missing data exploration
 
-Missing data related prep can be quick and dirty, or more fancy. The lowest abundance proteins will have the most detection variability and contain more missing values. These proteins are identifiable but too much missing data makes them non-quantifiable. The prelude to missing data imputation is to try and sort the table by decreasing relative abundance and determine an abundance cutoff that excludes the low abundance, non-quantifiable proteins. With some luck, this will remove much of the missing data and change the nature of the missing value imputation problem. [Note that folks talking about left-censored missing data imputation are trying to do data imputation for non-quantifiable proteins. This is the first clue that poor understanding of the data is the most important problem to fix.]
+Missing data related prep can be quick and dirty, or more fancy. The lowest abundance proteins will have the most detection variability and contain more missing values. These proteins are identifiable but too much missing data makes them non-quantifiable. The prelude to missing data imputation is to try and sort the table by decreasing relative abundance and determine an abundance cutoff that excludes the low abundance, non-quantifiable proteins. With some luck, this will remove much of the missing data and change the nature of the missing value imputation problem. 
+
+> Note that folks talking about left-censored missing data imputation are trying to do data imputation for non-quantifiable proteins. This is the first clue that poor understanding of the data is the most important problem to fix.
+
 * A “ranking” column was added (above).
 * I add a column with a count of missing values (assuming missing values are all the same value – like empty cells or zeros).
     - Depending on your brain, you can do the counting as missing values **or** as non-missing values.
