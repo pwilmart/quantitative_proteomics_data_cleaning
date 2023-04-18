@@ -15,7 +15,7 @@ I like Excel for table exploration and filtering (data cleaning/wrangling) to pr
 ### Typical data prep steps
 
 *	Make sure that sample key and biological group membership is known for the LC runs. Many QC metrics are applied within biological groups rather than for all samples in an experiment.
-    + Make R compatible short names that identified the sample and biological group.
+    + Make R compatible short names that identify the sample and biological group.
     + Use underscores as separators. R likes periods in variable names, too, but periods have meanings in other languages (Python, for example).
 *	I usually do QC checks on protein-level summaries for the starting data table. There are many ways to summarize peptide-level measurements in bottom-up data into protein relative abundance estimates. Some methods are based on common sense, make use of protein inference, and assume proteins are the sum of their parts. Other summaries are less anchored to reality and may be based on mathematical properties of the summary values (assuming what is mathematically “better” can be defined). Unless the biological subjects are mathematicians, I would avoid mathematical/statistical forms of protein summarization.
 *	I set up some leading rows for working space at the top of the Excel sheet. This violates typical good table design where the headers are in the first row. The prepped data will be saved in a tab-delimited text file with the headers in the first row after the Excel work has been completed.
