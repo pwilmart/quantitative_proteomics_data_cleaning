@@ -19,22 +19,22 @@ I like Excel for table exploration and filtering (data cleaning/wrangling) to pr
     + Use underscores as separators. R likes periods in variable names, too, but periods have meanings in other languages (Python, for example).
 *	I usually do QC checks on protein-level summaries for the starting data table. There are many ways to summarize peptide-level measurements in bottom-up data into protein relative abundance estimates. Some methods are based on common sense, make use of protein inference, and assume proteins are the sum of their parts. Other summaries are less anchored to reality and may be based on mathematical properties of the summary values (assuming what is mathematically “better” can be defined). Unless the biological subjects are mathematicians, I would avoid mathematical/statistical forms of protein summarization.
 *	I set up some leading rows for working space at the top of the Excel sheet. This violates typical good table design where the headers are in the first row. The prepped data will be saved in a tab-delimited text file with the headers in the first row after the Excel work has been completed.
-  - The column headers will usually be in Row 5 or Row 10.
-  - I add sample/group names in the row above the actual quantitative data column headers. This allows for left-to-right table sorting to group samples. Sorting columns by biological group might need to be done at some point.
+    - The column headers will usually be in Row 5 or Row 10.
+    - I add sample/group names in the row above the actual quantitative data column headers. This allows for left-to-right table sorting to group samples. Sorting columns by biological group might need to be done at some point.
 * I select the column header row (5 or 10), make bold, and then turn on column filters.
 * I use split views to see the top and the bottom of the table at the same time.
 * Identify possible contaminants and exclude those proteins. Use of common contaminant sequence collections during searching catches some but not all contaminants. Also, some common contaminants may not be contaminants in all experiments (every proteomic experiment seems different).
-  - I usually insert a “ranking” numerical column with an abundance quantity (average spectral counts per sample, average intensity per sample) and will eventually sort descending to order the table by decreasing abundance (and move excluded proteins to the bottom of the table). Many proteomics results tables have some sort of text column to denote (flag) contaminants, decoys, etc.
-  - I set the values in the “ranking column” to negative values for decoys (-3), standard contaminants (-2), any other proteins to exclude (-1), etc.
-  - There may be additional keratins to exclude. My tables have protein FASTA descriptions columns so I can search for “keratin”, “hemoglobulin”, etc.
-  - Blood proteins are not always contaminants, for example. Hemoglobins in blood preps are usually considered contaminants.
+    - I usually insert a “ranking” numerical column with an abundance quantity (average spectral counts per sample, average intensity per sample) and will eventually sort descending to order the table by decreasing abundance (and move excluded proteins to the bottom of the table). Many proteomics results tables have some sort of text column to denote (flag) contaminants, decoys, etc.
+    - I set the values in the “ranking column” to negative values for decoys (-3), standard contaminants (-2), any other proteins to exclude (-1), etc.
+    - There may be additional keratins to exclude. My tables have protein FASTA descriptions columns so I can search for “keratin”, “hemoglobulin”, etc.
+    - Blood proteins are not always contaminants, for example. Hemoglobins in blood preps are usually considered contaminants.
 * There may be proteins that were IDed without any quant values. Quantification is a higher bar than identification.
-  - If I have “ranking” values of zero (suggesting that there were no quant values), those proteins can be flagged, too.
+    - If I have “ranking” values of zero (suggesting that there were no quant values), those proteins can be flagged, too.
 *	When proteins to exclude have been determined, I sort descending on the ranking column. Decreasing relative abundance is a more biological way to order the table.
-  - Excluded (and zero) proteins get moved to the bottom of the table.
-  - I color in grey the cells for the excluded proteins at the bottom (to make sure that they do not escape from their bottom cells in some later Excel step).
+    - Excluded (and zero) proteins get moved to the bottom of the table.
+    - I color in grey the cells for the excluded proteins at the bottom (to make sure that they do not escape from their bottom cells in some later Excel step).
 *	The fraction of signal associated with contaminants per sample can be useful to compute. Once the table has been re-ordered and contaminants have been labeled, sums of quantities for contaminants, for all proteins, and for non-excluded proteins can be computed. Those are things I put in the extra top rows.
-  - The total signal of non-contaminant proteins per sample can also be helpful in finding samples that may have had a poor LC-MS experience.
+    - The total signal of non-contaminant proteins per sample can also be helpful in finding samples that may have had a poor LC-MS experience.
 
 ### Missing data exploration
 
