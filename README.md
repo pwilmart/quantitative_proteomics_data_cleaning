@@ -15,8 +15,8 @@ I like Excel for table exploration and filtering (data cleaning/wrangling) to pr
 ### Typical data prep steps
 
 *	Make sure that sample key and biological group membership is known for the LC runs. Many QC metrics are applied within biological groups rather than for all samples in an experiment.
-  - Make R compatible short names that identified the sample and biological group.
-  - Use underscores as separators. R likes periods in variable names, too, but periods have meanings in other languages (Python, for example).
+  + Make R compatible short names that identified the sample and biological group.
+  + Use underscores as separators. R likes periods in variable names, too, but periods have meanings in other languages (Python, for example).
 *	I usually do QC checks on protein-level summaries for the starting data table. There are many ways to summarize peptide-level measurements in bottom-up data into protein relative abundance estimates. Some methods are based on common sense, make use of protein inference, and assume proteins are the sum of their parts. Other summaries are less anchored to reality and may be based on mathematical properties of the summary values (assuming what is mathematically “better” can be defined). Unless the biological subjects are mathematicians, I would avoid mathematical/statistical forms of protein summarization.
 *	I set up some leading rows for working space at the top of the Excel sheet. This violates typical good table design where the headers are in the first row. The prepped data will be saved in a tab-delimited text file with the headers in the first row after the Excel work has been completed.
   - The column headers will usually be in Row 5 or Row 10.
@@ -39,7 +39,7 @@ I like Excel for table exploration and filtering (data cleaning/wrangling) to pr
 ### Missing data exploration
 
 Missing data related prep can be quick and dirty, or more fancy. The lowest abundance proteins will have the most detection variability and contain more missing values. These proteins are identifiable but too much missing data makes them non-quantifiable. The prelude to missing data imputation is to try and sort the table by decreasing relative abundance and determine an abundance cutoff that excludes the low abundance, non-quantifiable proteins. With some luck, this will remove much of the missing data and change the nature of the missing value imputation problem. [Note that folks talking about left-censored missing data imputation are trying to do data imputation for non-quantifiable proteins. This is the first clue that poor understanding of the data is the most important problem to fix.]
-* A “ranking” column was added above (step 4.1).
+* A “ranking” column was added (above).
 * I add a column with a count of missing values (assuming missing values are all the same value – like empty cells or zeros).
   - Depending on your brain, you can do the counting as missing values OR as non-missing values.
   - Quick and dirty is to ignore biological groups when counting things.
